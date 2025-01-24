@@ -1,0 +1,33 @@
+public class Box {
+    private ArrayList<Shape> shapes;
+
+    public Box() {
+        this.shapes = new ArrayList<>();
+    }
+
+    public void add(Shape shape) {
+        this.shapes.add(shape);
+    }
+
+    public double getTotalArea() {
+        double totalArea = 0;
+
+        for (int i = 0; i < this.shapes.size(); i++) {
+            totalArea = totalArea + shapes.get(i).getArea();
+        }
+
+        return totalArea;
+    }
+
+    public double getTotalCircumference() {
+        double totalCircumference = 0;
+
+        for (int i = 0; i < this.shapes.size(); i++) {
+            totalCircumference = totalCircumference + shapes.get(i).getCircumference();
+        }
+
+        return totalCircumference;
+    }
+
+    
+    }
