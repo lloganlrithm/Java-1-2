@@ -1,0 +1,47 @@
+public class Triangle extends Shape {
+	private double width;
+	private double height; 
+	private double c;
+	
+	public Triangle(double width, double height, double c) {
+		super();
+		this.width = width;
+		this.height = height;
+		this.c = Math.sqrt(width*width + height*height);
+
+	}
+
+	public Triangle(double width, double height) {
+		super();
+		this.width = width;
+		this.height = height;
+	}
+
+	public void setWidth(double width) {
+        this.width = width;
+    }
+    public void setHeight(double height) {
+        this.height = height;
+    }
+    public void setC(double c) {
+        this.c = c;
+    }
+public double getWidth() {
+        return this.width;
+    }
+    public double getHeight() {
+        return this.height;
+    }
+    public double getC() {
+        return this.c;
+    }
+		@Override
+	public double getCircumference() {
+		return width + height + c;
+	}
+		@Override
+	public double getArea() {
+		return 0.5 * width * height;
+	}
+	
+}
